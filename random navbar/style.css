@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root{
+  --peachColor: #ffc09f;
+  --yellowColor: #ffee93;
+  --paleColor: #fcf5c7;
+  --blueColor: #a0ced9;
+  --greenColor: #adf7b6;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+}  
+body {
+  font-family: Share Tech Mono, Tahoma, sans-serif;
+  color: #263238;
+}
+/*----------NavBar-------------------------------------*/
+nav {
+  display: flex; /*puts content on side*/
+  justify-content: space-between; /*adds space between them*/
+  padding: 1rem 2rem; /*1rem of space top, 2rem space on sides*/
+  background: #cfd8dc;
+}
+nav ul {
+  display: flex; /*moves li content on it side*/
+  list-style: none; /*removes the dots on li*/
+}
+nav li {
+  padding-left: 1rem; /*adds 1rem space to left side of li content*/
+}
+nav a {
+  text-decoration: none; /*removes the underlying a decoration line*/
+  color: darkblue;
+}
+/*-----------Phones------------------------------------*/
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column;
+    padding-top: 0.5rem;
+  }
+  nav li {
+    padding: 0.5rem 0;
+  }
+} 
+/*------------------------------------------------------*/
+
+.smol-flexbox-grid {
+    --min: 10ch;
+    --gap: 1rem;
+  
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+
+    border: 3px solid maroon;
+    padding: 1.5rem clamp(1rem, 5%, 3rem);
+  }
+  
+  .smol-flexbox-grid > * {
+    flex: 1 1 var(--min);
+  }
+  .imax {
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .butt{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #cfd8dc;
+
+  }
+  .bx:hover {
+    cursor: pointer;
+  }
+  /*---------------------------------------------------*/
+  footer {
+    background-color: var(--peachColor);
+    height: auto;
+    width: 100%;
+  }
+  .foot{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+    padding: 2rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .foot li a{
+    text-decoration: none;
+    color: #000;
+    padding: 2rem;
+  }
+  /*---------------------------------------------------*/
+  
